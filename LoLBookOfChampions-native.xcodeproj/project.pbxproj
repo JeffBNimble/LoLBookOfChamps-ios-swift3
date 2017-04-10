@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54C1803826B533D1F6E6BE62 /* LoLBookOfChampions_nativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C181F63947D707098B5AF0 /* LoLBookOfChampions_nativeUITests.swift */; };
+		54C181CEFC3CD8FEFB40AEF0 /* LoLRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C18D466F7A9592C8CE719E /* LoLRepo.swift */; };
+		54C184370C06D18B5FC8F8BD /* DBUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C184939B68787DB637D542 /* DBUtils.swift */; };
+		54C184FF7D8137888C0BB0A8 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C186A009BA5E55D1522B4E /* Application.swift */; };
+		54C185F9341BD19CB8B02575 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54C18F23BF0E693A95356424 /* Info.plist */; };
+		54C186C3131B01878D044463 /* LoLBookOfChampions_nativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C18280349D1C17B2DFD3C9 /* LoLBookOfChampions_nativeTests.swift */; };
+		54C1893E8C1C79A4D8C3AD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C180BF4DFC75746CAFD0E5 /* Assets.xcassets */; };
+		54C189921930D31BEB8B22ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1800147354357A4704981 /* ViewController.swift */; };
+		54C18A8D9C783E28D1EEAD1B /* RoutingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1840A3A317FDBE33A9965 /* RoutingUtils.swift */; };
+		54C18D283CB3A02D7E08FBB7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54C181FFABFB0A225118D220 /* Info.plist */; };
+		54C18DC06F47B3A488751D05 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1830A9919D36CEC75B543 /* Foundation+Extension.swift */; };
+		54C18E4A1557CBF647A4F974 /* RepoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C187832C4AD81074BE9C13 /* RepoUtils.swift */; };
+		A55EC8731E80C3310065382F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8711E80C3310065382F /* SQLite.framework */; };
+		A55EC8741E80C3310065382F /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8721E80C3310065382F /* SwiftyBeaver.framework */; };
+		A55EC8771E80C3D40065382F /* SQLite.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8711E80C3310065382F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A55EC8781E80C3D40065382F /* SwiftyBeaver.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8721E80C3310065382F /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5919B931E80C8EB00B43F33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5919B8F1E80C8EB00B43F33 /* LaunchScreen.storyboard */; };
+		A5919B941E80C8EB00B43F33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5919B911E80C8EB00B43F33 /* Main.storyboard */; };
+		A5FB21701E846B3600D844DA /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216D1E846B3600D844DA /* RxBlocking.framework */; };
+		A5FB21711E846B3600D844DA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216E1E846B3600D844DA /* RxCocoa.framework */; };
+		A5FB21721E846B3600D844DA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216F1E846B3600D844DA /* RxSwift.framework */; };
+		A5FB21731E846B4600D844DA /* RxBlocking.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216D1E846B3600D844DA /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5FB21741E846B4600D844DA /* RxCocoa.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216E1E846B3600D844DA /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5FB21751E846B4600D844DA /* RxSwift.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A5FB216F1E846B3600D844DA /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54C18E6789350695FC801DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54C18B6E08742967E2A66283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54C181077E26B041F6D7C683;
+			remoteInfo = "LoLBookOfChampions-native";
+		};
+		54C18F9E01B66686673798D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54C18B6E08742967E2A66283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54C181077E26B041F6D7C683;
+			remoteInfo = "LoLBookOfChampions-native";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A55EC8761E80C3980065382F /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5FB21731E846B4600D844DA /* RxBlocking.framework in Copy Carthage Frameworks */,
+				A5FB21741E846B4600D844DA /* RxCocoa.framework in Copy Carthage Frameworks */,
+				A5FB21751E846B4600D844DA /* RxSwift.framework in Copy Carthage Frameworks */,
+				A55EC8771E80C3D40065382F /* SQLite.framework in Copy Carthage Frameworks */,
+				A55EC8781E80C3D40065382F /* SwiftyBeaver.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		54C1800147354357A4704981 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54C180BF4DFC75746CAFD0E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54C181F63947D707098B5AF0 /* LoLBookOfChampions_nativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampions_nativeUITests.swift; sourceTree = "<group>"; };
+		54C181FFABFB0A225118D220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		54C18280349D1C17B2DFD3C9 /* LoLBookOfChampions_nativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampions_nativeTests.swift; sourceTree = "<group>"; };
+		54C1830A9919D36CEC75B543 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		54C1840A3A317FDBE33A9965 /* RoutingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingUtils.swift; sourceTree = "<group>"; };
+		54C184939B68787DB637D542 /* DBUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUtils.swift; sourceTree = "<group>"; };
+		54C186A009BA5E55D1522B4E /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		54C187832C4AD81074BE9C13 /* RepoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoUtils.swift; sourceTree = "<group>"; };
+		54C18B2E5A3F111AEC2883FE /* LoLBookOfChampions-native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoLBookOfChampions-native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C18B59013B359B660B5265 /* LoLBookOfChampions-nativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoLBookOfChampions-nativeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C18BD8A71A96ABC59A168F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		54C18D466F7A9592C8CE719E /* LoLRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoLRepo.swift; sourceTree = "<group>"; };
+		54C18DE5C440C1BFFE2F6ECE /* LoLBookOfChampions-nativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoLBookOfChampions-nativeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C18F23BF0E693A95356424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		A55EC8711E80C3310065382F /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		A55EC8721E80C3310065382F /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		A5919B901E80C8EB00B43F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5919B921E80C8EB00B43F33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5FB216D1E846B3600D844DA /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		A5FB216E1E846B3600D844DA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		A5FB216F1E846B3600D844DA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54C18A1DCD3D86C2EFC8341E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C18BCC6BE38033478439DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C18CE6B8E0F40B8F49EE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FB21701E846B3600D844DA /* RxBlocking.framework in Frameworks */,
+				A5FB21711E846B3600D844DA /* RxCocoa.framework in Frameworks */,
+				A5FB21721E846B3600D844DA /* RxSwift.framework in Frameworks */,
+				A55EC8731E80C3310065382F /* SQLite.framework in Frameworks */,
+				A55EC8741E80C3310065382F /* SwiftyBeaver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54C18008BFD25B747130C078 /* Champion */ = {
+			isa = PBXGroup;
+			children = (
+				54C1800147354357A4704981 /* ViewController.swift */,
+			);
+			path = Champion;
+			sourceTree = "<group>";
+		};
+		54C18619D28E45371E091267 /* ChampionSkin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChampionSkin;
+			sourceTree = "<group>";
+		};
+		54C186E112EB571499ACD191 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54C180BF4DFC75746CAFD0E5 /* Assets.xcassets */,
+				54C18BD8A71A96ABC59A168F /* Info.plist */,
+				A5919B8F1E80C8EB00B43F33 /* LaunchScreen.storyboard */,
+				A5919B911E80C8EB00B43F33 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		54C188866D853B6AF703AC10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54C18B2E5A3F111AEC2883FE /* LoLBookOfChampions-native.app */,
+				54C18B59013B359B660B5265 /* LoLBookOfChampions-nativeTests.xctest */,
+				54C18DE5C440C1BFFE2F6ECE /* LoLBookOfChampions-nativeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54C1891F3592364017587466 /* LoLBookOfChampions-nativeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54C18F23BF0E693A95356424 /* Info.plist */,
+				54C181F63947D707098B5AF0 /* LoLBookOfChampions_nativeUITests.swift */,
+			);
+			path = "LoLBookOfChampions-nativeUITests";
+			sourceTree = "<group>";
+		};
+		54C1892CAA7EB268EE4D00C9 /* LoLBookOfChampions-native */ = {
+			isa = PBXGroup;
+			children = (
+				54C18008BFD25B747130C078 /* Champion */,
+				54C18619D28E45371E091267 /* ChampionSkin */,
+				54C18CAC314BD35E1D5671EE /* Core */,
+				54C18DEC429405A663EA7861 /* Repos */,
+			);
+			path = "LoLBookOfChampions-native";
+			sourceTree = "<group>";
+		};
+		54C18A3E4FDFC45DE7941163 = {
+			isa = PBXGroup;
+			children = (
+				54C188866D853B6AF703AC10 /* Products */,
+				54C1892CAA7EB268EE4D00C9 /* LoLBookOfChampions-native */,
+				54C18E14A1C929B0D21206C7 /* LoLBookOfChampions-nativeTests */,
+				54C1891F3592364017587466 /* LoLBookOfChampions-nativeUITests */,
+				A55EC8701E80C3280065382F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		54C18CAC314BD35E1D5671EE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				54C186E112EB571499ACD191 /* Resources */,
+				54C186A009BA5E55D1522B4E /* Application.swift */,
+				54C1830A9919D36CEC75B543 /* Foundation+Extension.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		54C18DEC429405A663EA7861 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				54C18D466F7A9592C8CE719E /* LoLRepo.swift */,
+				54C187832C4AD81074BE9C13 /* RepoUtils.swift */,
+				54C184939B68787DB637D542 /* DBUtils.swift */,
+				54C1840A3A317FDBE33A9965 /* RoutingUtils.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		54C18E14A1C929B0D21206C7 /* LoLBookOfChampions-nativeTests */ = {
+			isa = PBXGroup;
+			children = (
+				54C181FFABFB0A225118D220 /* Info.plist */,
+				54C18280349D1C17B2DFD3C9 /* LoLBookOfChampions_nativeTests.swift */,
+			);
+			path = "LoLBookOfChampions-nativeTests";
+			sourceTree = "<group>";
+		};
+		A55EC8701E80C3280065382F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5FB216D1E846B3600D844DA /* RxBlocking.framework */,
+				A5FB216E1E846B3600D844DA /* RxCocoa.framework */,
+				A5FB216F1E846B3600D844DA /* RxSwift.framework */,
+				A55EC8711E80C3310065382F /* SQLite.framework */,
+				A55EC8721E80C3310065382F /* SwiftyBeaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54C18070C6F6ADA5A977A682 /* LoLBookOfChampions-nativeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C181560EE88E4F940E0564 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-nativeTests" */;
+			buildPhases = (
+				54C1894FCF3AD38BD48EC392 /* Sources */,
+				54C18A1DCD3D86C2EFC8341E /* Frameworks */,
+				54C181C276758718FF9F999E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54C18718292BB036E5F9333A /* PBXTargetDependency */,
+			);
+			name = "LoLBookOfChampions-nativeTests";
+			productName = "LoLBookOfChampions-nativeTests";
+			productReference = 54C18B59013B359B660B5265 /* LoLBookOfChampions-nativeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54C181077E26B041F6D7C683 /* LoLBookOfChampions-native */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C18FF094643822D78CFF81 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-native" */;
+			buildPhases = (
+				54C18A510783D9C16E22DA39 /* Sources */,
+				54C18CE6B8E0F40B8F49EE20 /* Frameworks */,
+				54C18784331629B85176D0C5 /* Resources */,
+				A55EC8761E80C3980065382F /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoLBookOfChampions-native";
+			productName = "LoLBookOfChampions-native";
+			productReference = 54C18B2E5A3F111AEC2883FE /* LoLBookOfChampions-native.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54C183D3BF28960A2C5BB27B /* LoLBookOfChampions-nativeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C1875F4544C5EE7C16F7A7 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-nativeUITests" */;
+			buildPhases = (
+				54C18F25CE85C11B8913D055 /* Sources */,
+				54C18BCC6BE38033478439DD /* Frameworks */,
+				54C1873FAB7FF278750AEF99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54C180C74DBCB3679332FBF9 /* PBXTargetDependency */,
+			);
+			name = "LoLBookOfChampions-nativeUITests";
+			productName = "LoLBookOfChampions-nativeUITests";
+			productReference = 54C18DE5C440C1BFFE2F6ECE /* LoLBookOfChampions-nativeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54C18B6E08742967E2A66283 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Nimble Noggin Software";
+			};
+			buildConfigurationList = 54C18948BADD14FBBC645A12 /* Build configuration list for PBXProject "LoLBookOfChampions-native" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54C18A3E4FDFC45DE7941163;
+			productRefGroup = 54C188866D853B6AF703AC10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54C181077E26B041F6D7C683 /* LoLBookOfChampions-native */,
+				54C18070C6F6ADA5A977A682 /* LoLBookOfChampions-nativeTests */,
+				54C183D3BF28960A2C5BB27B /* LoLBookOfChampions-nativeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54C181C276758718FF9F999E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C18D283CB3A02D7E08FBB7 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C1873FAB7FF278750AEF99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C185F9341BD19CB8B02575 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C18784331629B85176D0C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5919B941E80C8EB00B43F33 /* Main.storyboard in Resources */,
+				54C1893E8C1C79A4D8C3AD7E /* Assets.xcassets in Resources */,
+				A5919B931E80C8EB00B43F33 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54C1894FCF3AD38BD48EC392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C186C3131B01878D044463 /* LoLBookOfChampions_nativeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C18A510783D9C16E22DA39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C184FF7D8137888C0BB0A8 /* Application.swift in Sources */,
+				54C189921930D31BEB8B22ED /* ViewController.swift in Sources */,
+				54C181CEFC3CD8FEFB40AEF0 /* LoLRepo.swift in Sources */,
+				54C18E4A1557CBF647A4F974 /* RepoUtils.swift in Sources */,
+				54C184370C06D18B5FC8F8BD /* DBUtils.swift in Sources */,
+				54C18A8D9C783E28D1EEAD1B /* RoutingUtils.swift in Sources */,
+				54C18DC06F47B3A488751D05 /* Foundation+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54C18F25CE85C11B8913D055 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C1803826B533D1F6E6BE62 /* LoLBookOfChampions_nativeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54C180C74DBCB3679332FBF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54C181077E26B041F6D7C683 /* LoLBookOfChampions-native */;
+			targetProxy = 54C18E6789350695FC801DDA /* PBXContainerItemProxy */;
+		};
+		54C18718292BB036E5F9333A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54C181077E26B041F6D7C683 /* LoLBookOfChampions-native */;
+			targetProxy = 54C18F9E01B66686673798D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5919B8F1E80C8EB00B43F33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5919B901E80C8EB00B43F33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5919B911E80C8EB00B43F33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5919B921E80C8EB00B43F33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54C18035EA098F08105D3328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LoLBookOfChampions-nativeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-nativeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "LoLBookOfChampions-native";
+			};
+			name = Debug;
+		};
+		54C180570DC2E8526105F4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoLBookOfChampions-native.app/LoLBookOfChampions-native";
+				INFOPLIST_FILE = "LoLBookOfChampions-nativeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-nativeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		54C1811ADB3B91F9B07D4FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoLBookOfChampions-native.app/LoLBookOfChampions-native";
+				INFOPLIST_FILE = "LoLBookOfChampions-nativeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-nativeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		54C181FC160B791BB451A940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "LoLBookOfChampions-native/Core/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-native";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		54C1857B3A5A0FD79C930C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54C1878269072A4F486BFEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "LoLBookOfChampions-nativeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-nativeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "LoLBookOfChampions-native";
+			};
+			name = Release;
+		};
+		54C18AD87EE74A41CDC61FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "LoLBookOfChampions-native/Core/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblenogginsoftware.LoLBookOfChampions-native";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		54C18BB9DC54220B509BFC5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54C181560EE88E4F940E0564 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-nativeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C180570DC2E8526105F4AA /* Debug */,
+				54C1811ADB3B91F9B07D4FBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C1875F4544C5EE7C16F7A7 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-nativeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C18035EA098F08105D3328 /* Debug */,
+				54C1878269072A4F486BFEBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C18948BADD14FBBC645A12 /* Build configuration list for PBXProject "LoLBookOfChampions-native" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C18BB9DC54220B509BFC5A /* Debug */,
+				54C1857B3A5A0FD79C930C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C18FF094643822D78CFF81 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions-native" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54C18AD87EE74A41CDC61FE1 /* Debug */,
+				54C181FC160B791BB451A940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54C18B6E08742967E2A66283 /* Project object */;
+}

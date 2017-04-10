@@ -1,0 +1,54 @@
+Objective
+=========
+Create a Restful Route maker that can build routes made of paths. The routes form a tree starting at the root. The tree contains a single root
+
+  / <- The root
+
+The root is a path component and can have multiple child routes
+
+  /accounts <- The root route has an "accounts" child route
+  /lol <- The root route has a "lol" child route
+
+Each path component can have child routes
+
+  /lol/champions <- The "lol" route has a "champions" child route
+
+A path component can either be fixed or variable. A fixed path component is just a string. A variable path component matches text or numbers and collects the value into a variable.
+
+  /lol/champions/{name:*}  <- A variable path component that matches text and collects the value into a variable named "name"
+
+  /lol/champions/{id:#} <- A variable path component that matches a number and collects the value into a variable named "id"
+
+So using a route with variable path components works like this:
+
+  /lol/champions/Fiddlesticks <- collects the variable "name" and assigns it the value of "Fiddlesticks"
+
+A variable path component can also have child routes
+
+  /lol/champions/{name:*}/skins
+
+You can mix and match variable path components and fixed path components
+
+  /lol/champions/{name:*}/skins/{id:#} <- A route pointing to a specific skin for a specific champion
+
+In addition to child path components, a path component can have one or more handlers
+Given the route /lol/champions/{name:*}/skins/{id:#} and matching resource /lol/champions/Aatrox/skins/1
+We can read:
+
+  typealias ReadHandler = (projection: [String]? = nil, selection : String? = nil, selectionArgs : [AnyObject?] m nil, groupBy : String? = nil, having : String? = nil, sort : String? = nil) throws -> Results
+  read(handler: ReadHandler) throws -> Results
+
+We can create:
+  typealias RowId = Int64
+  typealias CreateHandler = (values : [String : AnyObject?]) throws -> RowId
+  create(handler: CreateHandler) throws -> RowId
+
+We can update:
+  typealias UpdateCount = Int
+  typealias UpdateHandler = (selection : String? = nil, selectionArgs : [AnyObject?] = nil, values : [String : AnyObject?]) throws -> UpdateCount
+  update(handler: UpdateHandler) throws -> UpdateCount
+
+We can delete:
+  typealias DeleteCount = Int
+  typealias DeleteHandler = (selection : String? = nil, selectionArgs : [AnyObject?] = nil) throws -> DeleteCount
+  delete(handler: DeleteHandler) throws -> DeleteCount
