@@ -46,6 +46,54 @@ public struct SyncResult {
     var authenticationErrors = 0
     var networkErrors = 0
     var otherErrors = 0
+
+    public class Builder {
+        private var inserts = 0
+        private var updates = 0
+        private var deletes = 0
+        private var authenticationErrors = 0
+        private var networkErrors = 0
+        private var otherErrors = 0
+
+        func inserts(_ value : Int) -> Builder {
+            self.inserts = self.inserts + value
+            return self
+        }
+
+        func updates(_ value : Int) -> Builder {
+            self.updates = self.updates + value
+            return self
+        }
+
+        func deletes(_ value : Int) -> Builder {
+            self.deletes = self.deletes + value
+            return self
+        }
+
+        func authenticationErrors(_ value : Int) -> Builder {
+            self.authenticationErrors = self.authenticationErrors + value
+            return self
+        }
+
+        func networkErrors(_ value : Int) -> Builder {
+            self.networkErrors = self.networkErrors + value
+            return self
+        }
+
+        func otherErrors(_ value : Int) -> Builder {
+            self.otherErrors = self.otherErrors + value
+            return self
+        }
+
+        func build() -> SyncResult {
+            return SyncResult(inserts: self.inserts,
+                    updates: self.updates,
+                    deletes: self.deletes,
+                    authenticationErrors: self.authenticationErrors,
+                    networkErrors: self.networkErrors,
+                    otherErrors: self.otherErrors)
+        }
+    }
 }
 
 public protocol Syncable {
@@ -54,4 +102,8 @@ public protocol Syncable {
 
 public enum RepoError : Error {
     case repoNotStarted(message : String)
+}
+
+public enum ApiError : Error {
+    case badUrl(message : String)
 }

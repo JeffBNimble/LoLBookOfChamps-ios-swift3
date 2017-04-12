@@ -218,7 +218,7 @@ public protocol BuildableRoute {
 }
 
 public protocol RouteRequestable {
-    func create(uri : String, values : Values) throws -> ResourceIdentifier
+    func create(uri : String, values : Values?) throws -> ResourceIdentifier
     func delete(uri : String, selection : Selection?, selectionArgs : SelectionArgs?) throws -> DeleteCount
     func read(uri : String, projection : Projection?, selection : Selection?, selectionArgs : SelectionArgs?, grouping : Grouping?, having : Having?, sort : Sort?) throws -> Results
     func readSingle(uri: String, projection : Projection?, selection : Selection?, selectionArgs : SelectionArgs?, grouping : Grouping?, having : Having?, sort : Sort?) throws -> Result?

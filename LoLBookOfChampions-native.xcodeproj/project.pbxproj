@@ -19,6 +19,7 @@
 		54C18D283CB3A02D7E08FBB7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54C181FFABFB0A225118D220 /* Info.plist */; };
 		54C18DC06F47B3A488751D05 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1830A9919D36CEC75B543 /* Foundation+Extension.swift */; };
 		54C18E4A1557CBF647A4F974 /* RepoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C187832C4AD81074BE9C13 /* RepoUtils.swift */; };
+		54C18FD45DDBA7C786B245E5 /* PlatformDrivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C18A909EFF8EFC8CEFA3C4 /* PlatformDrivers.swift */; };
 		A55EC8731E80C3310065382F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8711E80C3310065382F /* SQLite.framework */; };
 		A55EC8741E80C3310065382F /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8721E80C3310065382F /* SwiftyBeaver.framework */; };
 		A55EC8771E80C3D40065382F /* SQLite.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = A55EC8711E80C3310065382F /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,6 +80,7 @@
 		54C184939B68787DB637D542 /* DBUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUtils.swift; sourceTree = "<group>"; };
 		54C186A009BA5E55D1522B4E /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		54C187832C4AD81074BE9C13 /* RepoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoUtils.swift; sourceTree = "<group>"; };
+		54C18A909EFF8EFC8CEFA3C4 /* PlatformDrivers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformDrivers.swift; sourceTree = "<group>"; };
 		54C18B2E5A3F111AEC2883FE /* LoLBookOfChampions-native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoLBookOfChampions-native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C18B59013B359B660B5265 /* LoLBookOfChampions-nativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoLBookOfChampions-nativeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C18BD8A71A96ABC59A168F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				54C186E112EB571499ACD191 /* Resources */,
 				54C186A009BA5E55D1522B4E /* Application.swift */,
 				54C1830A9919D36CEC75B543 /* Foundation+Extension.swift */,
+				54C18A909EFF8EFC8CEFA3C4 /* PlatformDrivers.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				54C184370C06D18B5FC8F8BD /* DBUtils.swift in Sources */,
 				54C18A8D9C783E28D1EEAD1B /* RoutingUtils.swift in Sources */,
 				54C18DC06F47B3A488751D05 /* Foundation+Extension.swift in Sources */,
+				54C18FD45DDBA7C786B245E5 /* PlatformDrivers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

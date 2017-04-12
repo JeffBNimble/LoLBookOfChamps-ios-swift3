@@ -6,25 +6,30 @@
 import Foundation
 import SQLite
 import SwiftyBeaver
+import RxSwift
 
+// The LoLRepo is a facade over requests into the local SQLite database and also into the LoLApi
 public class LoLRepo {
-    private let apiKey : String
-    private let apiEndpoint : String
+    fileprivate let logger = SwiftyBeaver.self
+    fileprivate let lolApi : LoLApi
     fileprivate let database : LoLDatabase
+    fileprivate let scheduler : SchedulerType
 
     fileprivate var router : Router?
 
-    init(databasePath : String?, apiEndpoint: String, apiKey : String) {
-        self.apiEndpoint = apiEndpoint
-        self.apiKey = apiKey
+    init(databasePath : String?, http: Http, apiEndpoint: String, apiKey : String, scheduler : SchedulerType) {
+        self.lolApi = LoLApi(http: http, apiEndpoint: apiEndpoint, apiKey: apiKey)
         self.database = LoLDatabase(databasePath: databasePath)
+        self.scheduler = scheduler
     }
 
     func start() {
+        self.logger.info("Starting the LoL Repository")
         self.createRouter()
     }
 
     func stop() {
+        self.logger.info("Stopping the LoL Repository")
         self.router = nil
     }
 }
@@ -75,7 +80,6 @@ extension LoLRepo {
 
         // GET skins
         skinsSegment.add(readHandler: { (projection: Projection?, selection: Selection?, selectionArgs: SelectionArgs?, grouping: Grouping? , having: Having?, sort: Sort?) in
-            print("OMG: \(selectionArgs)")
             return ResultSet()
         })
 
@@ -100,7 +104,7 @@ extension LoLRepo {
 
 // Invoke requests against the routes
 extension LoLRepo : RouteRequestable {
-    public func create(uri : String, values : Values) throws -> ResourceIdentifier {
+    public func create(uri : String, values : Values? = nil) throws -> ResourceIdentifier {
         let routeInfo = try findRoute(uri: uri)
 
         guard let handler = routeInfo.route?.createHandler else {
@@ -186,11 +190,87 @@ extension LoLRepo : RouteRequestable {
 
 extension LoLRepo : Syncable {
     public func sync(force : Bool) -> SyncResult {
-        print("OMG I'm syncing with force? \(force)")
+        let semaphore = DispatchSemaphore(value: 0)
 
-        return SyncResult()
+        let syncResultBuilder = SyncResult.Builder()
+        let _ = syncWithLoLApiObservable(forceSync: force, syncResultBuilder : syncResultBuilder)
+            .single()
+            .observeOn(CurrentThreadScheduler.instance)
+            .subscribe(onNext: {
+                semaphore.signal()
+            })
+
+
+        let _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        let syncResult = syncResultBuilder.build()
+        print("OMG: \(syncResult)")
+        return syncResult
     }
 
+    private func queryLocalLoLStaticDataVersionsObservable(syncResultBuilder: SyncResult.Builder) -> Observable<Results> {
+        return Observable.create() { observer in
+            syncResultBuilder.otherErrors(2)
+            observer.onNext(ResultSet())
+            observer.onCompleted()
+
+            return Disposables.create()
+        }.subscribeOn(self.scheduler)
+    }
+
+    private func retrieveLoLStaticRealmsObservable(syncResultBuilder: SyncResult.Builder) -> Observable<[String : Any]?> {
+        return Observable.create() { observer in
+            let realms : [String : Any]?
+            do {
+                realms = try self.lolApi.getLoLStaticDataRealms()
+            } catch let error {
+                syncResultBuilder.networkErrors(1)
+                observer.onError(error)
+                return Disposables.create()
+            }
+
+            observer.onNext(realms)
+            observer.onCompleted()
+
+            return Disposables.create()
+        }.subscribeOn(self.scheduler)
+    }
+
+    private func syncWithLoLApiObservable(forceSync: Bool, syncResultBuilder: SyncResult.Builder) -> Observable<Void> {
+        return Observable.combineLatest(
+           self.retrieveLoLStaticRealmsObservable(syncResultBuilder: syncResultBuilder),
+           self.queryLocalLoLStaticDataVersionsObservable(syncResultBuilder: syncResultBuilder)
+        ) { ($0, $1) }
+        .map() { (lolRealms, localVersionsResults) in
+            self.logger.debug(lolRealms)
+        }
+    }
+
+}
+
+// This is a facade into the various LoL Api services exposed to the application
+fileprivate class LoLApi {
+    private static var CHAMPIONS = "\(LOL_STATIC_DATA)/champions"
+    private static var LOL_STATIC_DATA = "/lol/static-data/v3"
+    private static var REALMS = "\(LOL_STATIC_DATA)/realms"
+    private let apiKey : String
+    private let endpoint : String
+    private let http : Http
+
+    init(http: Http, apiEndpoint : String, apiKey : String) {
+        self.http = http
+        self.endpoint = apiEndpoint
+        self.apiKey = apiKey
+    }
+
+    private func createUrl(apiPath : String) -> String {
+        return "\(endpoint)\(apiPath)?api_key=\(apiKey)"
+    }
+
+    func getLoLStaticDataRealms() throws -> [String : Any]? {
+        let url = createUrl(apiPath: LoLApi.REALMS)
+
+        return try self.http.get(url: url, headers: nil, body: nil) as? [String : Any]
+    }
 }
 
 fileprivate class LoLDatabase {
